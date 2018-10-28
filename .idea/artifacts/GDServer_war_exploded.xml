@@ -7,6 +7,10 @@
         <element id="directory" name="classes">
           <element id="module-output" name="GDServer" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="fastjson-1.2.51" />
+          <element id="library" level="project" name="servlet-api" />
+        </element>
       </element>
     </root>
   </artifact>
