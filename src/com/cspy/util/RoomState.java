@@ -13,6 +13,12 @@ public enum RoomState {
         this.level = level;
     }
 
+    @Override
+    public String toString() {
+        return this.name;
+    }
+
+
     public int getLevel() {
         return level;
     }

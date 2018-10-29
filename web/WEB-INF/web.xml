@@ -13,6 +13,15 @@
         <url-pattern>/login</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>rooms</servlet-name>
+        <servlet-class>com.cspy.RoomServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>rooms</servlet-name>
+        <url-pattern>/rooms</url-pattern>
+    </servlet-mapping>
+
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>
     </welcome-file-list>

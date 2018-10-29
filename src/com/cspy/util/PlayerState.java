@@ -4,7 +4,9 @@ public enum PlayerState {
     OFFLINE("离线",0),
     ONLINE("在线",1),
     GAMING("游戏中",2),
-    GAME_OFFLINE("掉线",3);
+    PREPARE("准备",3),
+    UNPREPARED("未准备",4),
+    GAME_OFFLINE("掉线",5);
 
 
     private String stateName;
@@ -15,6 +17,11 @@ public enum PlayerState {
         this.number = number;
     }
 
+    @Override
+    public String toString() {
+        return this.stateName;
+    }
+
     public int getNumber() {
         return number;
     }
@@ -22,4 +29,6 @@ public enum PlayerState {
     public String getStateName() {
         return stateName;
     }
+
+
 }
