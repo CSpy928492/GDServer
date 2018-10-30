@@ -54,8 +54,8 @@ public class RoomServlet extends HttpServlet {
                     Room newRoom = new Room(roomNumber, players, RoomState.NOT_READY);
                     rooms.add(newRoom);
                     jsonObject.put("state", 0);
-                    jsonObject.put("roomNumber", roomNumber);
-                    jsonObject.put("players", JSONArray.parseArray(JSONObject.toJSONString(players)));
+                    jsonObject.put("roomMessage", newRoom);
+//                    jsonObject.put("players", JSONArray.parseArray(JSONObject.toJSONString(players)));
                     pw.println(jsonObject.toString());
                     System.out.println("新加入房间 room :" + newRoom);
 
@@ -107,7 +107,7 @@ public class RoomServlet extends HttpServlet {
         return i;
     }
 
-    private int getNotFullRoomNumber(List<Room> rooms) {
+    private synchronized int getNotFullRoomNumber(List<Room> rooms) {
         for (Room room : rooms) {
             if (!room.isFull()) {
                 return room.getRoomNumber();
